@@ -6,7 +6,19 @@
   <title>Document</title>
 </head>
 <body>
+  <script>
+    function printIt() {
+      const iframeWindow = document.getElementById('pdf').contentWindow
+      iframeWindow.focus();
+      iframeWindow.print();
+    }
+  </script>
+  
   <h2>Test printout</h2>
-  <iframe src="./123.pdf" />
+  <button onclick="printIt()" type="button">print</button>
+
+  <iframe src="./123.pdf" id="pdf"/>
+
+
 </body>
 </html>
